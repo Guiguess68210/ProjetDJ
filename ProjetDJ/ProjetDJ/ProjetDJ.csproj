@@ -66,16 +66,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Achat.cs" />
-    <Compile Include="AchatADO.cs" />
     <Compile Include="Administration.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Administration.Designer.cs">
       <DependentUpon>Administration.cs</DependentUpon>
     </Compile>
-    <Compile Include="Contenir.cs" />
-    <Compile Include="ContenirADO.cs" />
+    <Compile Include="Classes\Achat.cs" />
+    <Compile Include="Classes\AchatADO.cs" />
+    <Compile Include="Classes\Administrateur.cs" />
+    <Compile Include="Classes\AdministrateurADO.cs" />
+    <Compile Include="Classes\Clients.cs" />
+    <Compile Include="Classes\ClientsADO.cs" />
+    <Compile Include="Classes\Commande.cs" />
+    <Compile Include="Classes\CommandeADO.cs" />
+    <Compile Include="Classes\Contenir.cs" />
+    <Compile Include="Classes\ContenirADO.cs" />
+    <Compile Include="Classes\Location.cs" />
+    <Compile Include="Classes\LocationADO.cs" />
+    <Compile Include="Classes\Materiel.cs" />
+    <Compile Include="Classes\MaterielADO.cs" />
     <Compile Include="Dates.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -124,9 +134,6 @@
     <Compile Include="LocAchat.Designer.cs">
       <DependentUpon>LocAchat.cs</DependentUpon>
     </Compile>
-    <Compile Include="LocationADO.cs" />
-    <Compile Include="Materiel.cs" />
-    <Compile Include="MaterielADO.cs" />
     <Compile Include="MdpOublie.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -199,5 +206,6 @@
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
