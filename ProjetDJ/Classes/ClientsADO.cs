@@ -41,7 +41,7 @@ namespace ProjetDJ
         {
             bool res = false;
             MySqlCommand cmd = new MySqlCommand();
-            cmd.CommandText = "UPDATE clients SET nom = @nom, prenom = @prenom, adresse = @adresse, ville = @ville, codePostal = @codePostal, numFixe = @numPortable, mail = @mail, mdp = @mdp WHERE idCl = @idCl";
+            cmd.CommandText = "UPDATE clients SET nom = @nom, prenom = @prenom, adresse = @adresse, ville = @ville, codePostal = @codePostal, numFixe = @numFixe, numPortable = @numPortable, mail = @mail, mdp = @mdp WHERE idCl = @idCl";
             cmd.Parameters.AddWithValue("@nom", clients.Nom);
             cmd.Parameters.AddWithValue("@prenom", clients.Prenom);
             cmd.Parameters.AddWithValue("@adresse", clients.Adresse);
@@ -49,9 +49,9 @@ namespace ProjetDJ
             cmd.Parameters.AddWithValue("@codePostal", clients.CodePostal);
             cmd.Parameters.AddWithValue("@numFixe", clients.NumFixe);
             cmd.Parameters.AddWithValue("@numPortable", clients.NumPortable);
-            cmd.Parameters.AddWithValue("@mail", clients.Email);
+            cmd.Parameters.AddWithValue("@mail", clients.Mail);
             cmd.Parameters.AddWithValue("@mdp", clients.Motdepasse);
-            cmd.Parameters.AddWithValue("@idCl", clients.IdCl);
+            cmd.Parameters.AddWithValue("@idCl", clients.Id);
             cmd.Connection = Connexion.getInstance();
 
             try
@@ -72,8 +72,8 @@ namespace ProjetDJ
         {
             bool res = false;
             MySqlCommand cmd = new MySqlCommand();
-            cmd.CommandText = "DELETE FROM clients WHERE id = @idCl";
-            cmd.Parameters.AddWithValue("@id", clients.Id);
+            cmd.CommandText = "DELETE FROM clients WHERE idCl = @idCl";
+            cmd.Parameters.AddWithValue("@idCl", clients.Id);
             cmd.Connection = Connexion.getInstance();
 
             try
@@ -99,7 +99,7 @@ namespace ProjetDJ
             cmd.Parameters.AddWithValue("@idCl", id);
 
             //Connexion temporaire !
-            string chaineDeConnexion = "database=cookandme; server=164.132.50.171; user id=ptanguy; pwd=olmeto";
+            string chaineDeConnexion = "server=localhost; database=projet dj; username=root; Pooling=true; charset=utf8";
             MySqlConnection connexion = null;
             try
             {
@@ -127,7 +127,7 @@ namespace ProjetDJ
                     string numPortable = reader["numPortable"].ToString();
                     string mail = reader["mail"].ToString();
                     string mdp = reader["mdp"].ToString();
-                    clients = new Clients(id, nom, prenom, adresse, ville, codePostal, numFixe, numPortable, mail, mdp);
+                    clients = new Clients( nom, prenom, adresse, ville, codePostal, numFixe, numPortable, mail, mdp);
                 }
                 cmd = null;
                 reader.Close();
@@ -157,9 +157,7 @@ namespace ProjetDJ
                 MySqlDataReader reader = cmd.ExecuteReader();
 
                 while (reader.Read())
-                {
-                    string id = reader["id"].ToString();
-                    string nom = reader["nom"].ToString();
+                {   string nom = reader["nom"].ToString();
                     string prenom = reader["prenom"].ToString();
                     string adresse = reader["adresse"].ToString();
                     string ville = reader["ville"].ToString();
@@ -168,7 +166,7 @@ namespace ProjetDJ
                     string numPortable = reader["numportable"].ToString();
                     string mail = reader["mail"].ToString();
                     string mdp = reader["mdp"].ToString();
-                    clients = new Clients(id, nom, prenom, adresse, ville, codePostal, numfixe, numPortable, mail, mdp);
+                    clients = new Clients(nom, prenom, adresse, ville, codePostal, numfixe, numPortable, mail, mdp);
                     res.Add(clients);
                 }
                 cmd = null;
@@ -212,7 +210,6 @@ namespace ProjetDJ
 
                 while (reader.Read())
                 {
-                    string id = reader["id"].ToString();
                     string nom = reader["nom"].ToString();
                     string prenom = reader["prenom"].ToString();
                     string adresse = reader["adresse"].ToString();
@@ -222,7 +219,7 @@ namespace ProjetDJ
                     string numPortable = reader["numPortable"].ToString();
                     string mail = reader["mail"].ToString();
                     string mdp = reader["mdp"].ToString();
-                    clients = new Utilisateur(id, nom, prenom, adresse, ville, codePostal, numFixe, numPortable, mail, mdp);
+                    clients = new Clients( nom, prenom, adresse, ville, codePostal, numFixe, numPortable, mail, mdp);
                     res.Add(clients);
                 }
                 cmd = null;

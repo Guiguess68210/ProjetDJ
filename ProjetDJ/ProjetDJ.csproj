@@ -80,6 +80,7 @@
     <Compile Include="Classes\ClientsADO.cs" />
     <Compile Include="Classes\Commande.cs" />
     <Compile Include="Classes\CommandeADO.cs" />
+    <Compile Include="Classes\Connexion.cs" />
     <Compile Include="Classes\Contenir.cs" />
     <Compile Include="Classes\ContenirADO.cs" />
     <Compile Include="Classes\Location.cs" />

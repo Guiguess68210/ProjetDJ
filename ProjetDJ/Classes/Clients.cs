@@ -30,7 +30,7 @@ namespace ProjetDJ
             this.numFixe = numFixe;
             this.numPortable = numPortable;
             this.mail = mail;
-            this.motdepasse = motdepasse;
+            this.mdp = mdp;
 
         }
 
@@ -45,7 +45,7 @@ namespace ProjetDJ
         public string NumPortable { get => numPortable; set => numPortable = value; }
         public string Mail { get => mail; set => mail = value; }
         public string Motdepasse { get => mdp; set => mdp = value; }
-        public string Username { get => username; set => username = value; }
+        
 
 
 
