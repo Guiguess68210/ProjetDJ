@@ -60,3 +60,4 @@ G:\ProjetE6\ProjetDJ\ProjetDJ\ProjetDJ\obj\Debug\ProjetDJ.csproj.CoreCompileInpu
 G:\ProjetE6\ProjetDJ\ProjetDJ\ProjetDJ\obj\Debug\ProjetDJ.csproj.CopyComplete
 G:\ProjetE6\ProjetDJ\ProjetDJ\ProjetDJ\obj\Debug\ProjetDJ.exe
 G:\ProjetE6\ProjetDJ\ProjetDJ\ProjetDJ\obj\Debug\ProjetDJ.pdb
+F:\ProjetE6\ProjetDJ\ProjetDJ\ProjetDJ\obj\Debug\ProjetDJ.AjoutMateriel.resources

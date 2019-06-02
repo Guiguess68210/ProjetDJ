@@ -36,6 +36,7 @@
             this.lkLblMdpOublie = new System.Windows.Forms.LinkLabel();
             this.lblAccueil = new System.Windows.Forms.Label();
             this.btnInscription = new System.Windows.Forms.Button();
+            this.chkAdmin = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // lblLogin
@@ -67,7 +68,7 @@
             this.txtLogin.Name = "txtLogin";
             this.txtLogin.Size = new System.Drawing.Size(132, 22);
             this.txtLogin.TabIndex = 2;
-            this.txtLogin.Text = "votre mail";
+            this.txtLogin.Text = "Entrez votre mail";
             // 
             // txtMDP
             // 
@@ -121,12 +122,23 @@
             this.btnInscription.UseVisualStyleBackColor = true;
             this.btnInscription.Click += new System.EventHandler(this.BtnInscription_Click);
             // 
+            // chkAdmin
+            // 
+            this.chkAdmin.AutoSize = true;
+            this.chkAdmin.Location = new System.Drawing.Point(156, 248);
+            this.chkAdmin.Name = "chkAdmin";
+            this.chkAdmin.Size = new System.Drawing.Size(111, 20);
+            this.chkAdmin.TabIndex = 8;
+            this.chkAdmin.Text = "Administration";
+            this.chkAdmin.UseVisualStyleBackColor = true;
+            // 
             // Accueil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(751, 548);
+            this.Controls.Add(this.chkAdmin);
             this.Controls.Add(this.btnInscription);
             this.Controls.Add(this.lblAccueil);
             this.Controls.Add(this.lkLblMdpOublie);
@@ -156,6 +168,7 @@
         private System.Windows.Forms.LinkLabel lkLblMdpOublie;
         private System.Windows.Forms.Label lblAccueil;
         private System.Windows.Forms.Button btnInscription;
+        private System.Windows.Forms.CheckBox chkAdmin;
     }
 }
 

@@ -15,32 +15,38 @@ namespace ProjetDJ
         Listes lst;
         VosCommandes VC;
         Accueil accueil;
-        public LocAchat()
+        public string locAchat = "";
+        private string idCl;
+        public LocAchat(string idCl)
         {
             InitializeComponent();
+            this.idCl = idCl;
         }
 
         private void LocAchat_Load(object sender, EventArgs e)
         {
-            lst = new Listes();
-            VC = new VosCommandes();
             accueil = new Accueil();
         }
 
         private void BtnAchat_Click(object sender, EventArgs e)
         {
-            lst.Show();
+            locAchat = "Achat";
+            lst = new Listes(locAchat, this.idCl);
+            lst.Show();         
             this.Hide();
         }
 
         private void BtnLocation_Click(object sender, EventArgs e)
         {
+            locAchat = "Location";
+            lst = new Listes(locAchat, this.idCl);
             lst.Show();
             this.Hide();
         }
 
         private void BtnCommande_Click(object sender, EventArgs e)
         {
+            VC = new VosCommandes(this.idCl);
             VC.Show();
             this.Hide();
         }

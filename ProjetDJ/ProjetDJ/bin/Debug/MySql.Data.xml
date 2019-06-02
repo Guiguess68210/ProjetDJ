@@ -4,6 +4,16 @@
         <name>MySql.Data</name>
     </assembly>
     <members>
+        <member name="T:MySql.Data.MySqlClient.Authentication.CachingSha2AuthenticationPlugin">
+            <summary>
+            The implementation of the caching_sha2_password authentication plugin.
+            </summary>
+        </member>
+        <member name="T:MySql.Data.MySqlClient.Authentication.AuthStage">
+            <summary>
+            Defines the stage of the authentication.
+            </summary>
+        </member>
         <member name="M:MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.GetPlugin(System.String,MySql.Data.MySqlClient.NativeDriver,System.Byte[])">
             <summary>
             This is a factory method that is used only internally.  It creates an auth plugin based on the method type
@@ -8311,7 +8321,7 @@
         </member>
         <member name="F:MySql.Data.MySqlClient.MySqlErrorCode.CannotChangeTransactionIsolation">
             <summary></summary>
-            <remarks>ER_CANT_CHANGE_TX_ISOLATION</remarks>
+            <remarks>ER_CANT_CHANGE_TRANSACTION_ISOLATION</remarks>
         </member>
         <member name="F:MySql.Data.MySqlClient.MySqlErrorCode.DuplicateEntryAutoIncrementCase">
             <summary></summary>
@@ -9996,6 +10006,11 @@
               Looks up a localized string similar to Attempt to call stored function &apos;{0}&apos; without specifying a return parameter.
             </summary>
         </member>
+        <member name="P:MySql.Data.MySqlClient.Properties.Resources.RSAPublicKeyRetrievalNotEnabled">
+            <summary>
+              Looks up a localized string similar to Retrieval of the RSA public key is not enabled for insecure connections..
+            </summary>
+        </member>
         <member name="P:MySql.Data.MySqlClient.Properties.Resources.ServerTooOld">
             <summary>
               Looks up a localized string similar to Connector/Net no longer supports server versions prior to 5.0.
@@ -10189,6 +10204,11 @@
         <member name="P:MySql.Data.MySqlClient.Properties.Resources.UnableToParseFK">
             <summary>
               Looks up a localized string similar to There was an error parsing the foreign key definition..
+            </summary>
+        </member>
+        <member name="P:MySql.Data.MySqlClient.Properties.Resources.UnableToReadRSAKey">
+            <summary>
+              Looks up a localized string similar to Error encountered reading the RSA public key..
             </summary>
         </member>
         <member name="P:MySql.Data.MySqlClient.Properties.Resources.UnableToRetrieveParameters">

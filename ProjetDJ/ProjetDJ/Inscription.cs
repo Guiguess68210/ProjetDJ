@@ -25,8 +25,8 @@ namespace ProjetDJ
         private void Inscription_Load(object sender, EventArgs e)
         {
             accueil = new Accueil();
-            connect = new MySqlConnection("server=atoneoitszguiiss.mysql.db; sshPort=22; database=atoneoitszguiiss; username=atoneoitszguiiss password=Gui19iss; Pooling=true; charset=utf8");
-            //connect = new MySqlConnection("server=localhost; database=projet dj; username=root; Pooling=true; charset=utf8");
+            //connect = new MySqlConnection("server=atoneoitszguiiss.mysql.db; sshPort=22; database=atoneoitszguiiss; username=atoneoitszguiiss password=Gui19iss; Pooling=true; charset=utf8");
+            connect = new MySqlConnection("server=localhost; database=projet dj; username=root; Pooling=true; charset=utf8");
             try
             {
                 connect.Open();

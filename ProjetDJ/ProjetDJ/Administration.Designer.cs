@@ -30,20 +30,23 @@
         {
             this.lblAdmin = new System.Windows.Forms.Label();
             this.dGVFactures = new System.Windows.Forms.DataGridView();
+            this.idCo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.prixTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.effectifMaterielTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.typeCommande = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idCl = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblFactures = new System.Windows.Forms.Label();
-            this.lblGM = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnAjout = new System.Windows.Forms.Button();
+            this.btnMateriel = new System.Windows.Forms.Button();
             this.btnRetour = new System.Windows.Forms.Button();
+            this.btnClients = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dGVFactures)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblAdmin
             // 
             this.lblAdmin.AutoSize = true;
             this.lblAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAdmin.Location = new System.Drawing.Point(279, 42);
+            this.lblAdmin.Location = new System.Drawing.Point(287, 33);
             this.lblAdmin.Name = "lblAdmin";
             this.lblAdmin.Size = new System.Drawing.Size(186, 31);
             this.lblAdmin.TabIndex = 0;
@@ -53,10 +56,41 @@
             // 
             this.dGVFactures.AllowUserToOrderColumns = true;
             this.dGVFactures.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dGVFactures.Location = new System.Drawing.Point(52, 146);
+            this.dGVFactures.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idCo,
+            this.prixTotal,
+            this.effectifMaterielTotal,
+            this.typeCommande,
+            this.idCl});
+            this.dGVFactures.Location = new System.Drawing.Point(78, 145);
             this.dGVFactures.Name = "dGVFactures";
-            this.dGVFactures.Size = new System.Drawing.Size(692, 150);
+            this.dGVFactures.Size = new System.Drawing.Size(544, 150);
             this.dGVFactures.TabIndex = 1;
+            // 
+            // idCo
+            // 
+            this.idCo.HeaderText = "n°commande";
+            this.idCo.Name = "idCo";
+            // 
+            // prixTotal
+            // 
+            this.prixTotal.HeaderText = "Prix";
+            this.prixTotal.Name = "prixTotal";
+            // 
+            // effectifMaterielTotal
+            // 
+            this.effectifMaterielTotal.HeaderText = "Effectif Total";
+            this.effectifMaterielTotal.Name = "effectifMaterielTotal";
+            // 
+            // typeCommande
+            // 
+            this.typeCommande.HeaderText = "Type de commande";
+            this.typeCommande.Name = "typeCommande";
+            // 
+            // idCl
+            // 
+            this.idCl.HeaderText = "n°client";
+            this.idCl.Name = "idCl";
             // 
             // lblFactures
             // 
@@ -68,31 +102,15 @@
             this.lblFactures.TabIndex = 2;
             this.lblFactures.Text = "Factures clients:";
             // 
-            // lblGM
+            // btnMateriel
             // 
-            this.lblGM.AutoSize = true;
-            this.lblGM.Location = new System.Drawing.Point(49, 326);
-            this.lblGM.Name = "lblGM";
-            this.lblGM.Size = new System.Drawing.Size(100, 13);
-            this.lblGM.TabIndex = 3;
-            this.lblGM.Text = "Gestion du matériel:";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(52, 366);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(692, 150);
-            this.dataGridView1.TabIndex = 4;
-            // 
-            // btnAjout
-            // 
-            this.btnAjout.Location = new System.Drawing.Point(611, 551);
-            this.btnAjout.Name = "btnAjout";
-            this.btnAjout.Size = new System.Drawing.Size(75, 23);
-            this.btnAjout.TabIndex = 5;
-            this.btnAjout.Text = "Ajouter";
-            this.btnAjout.UseVisualStyleBackColor = true;
+            this.btnMateriel.Location = new System.Drawing.Point(602, 551);
+            this.btnMateriel.Name = "btnMateriel";
+            this.btnMateriel.Size = new System.Drawing.Size(75, 23);
+            this.btnMateriel.TabIndex = 5;
+            this.btnMateriel.Text = "Materiel";
+            this.btnMateriel.UseVisualStyleBackColor = true;
+            this.btnMateriel.Click += new System.EventHandler(this.BtnMateriel_Click);
             // 
             // btnRetour
             // 
@@ -102,23 +120,33 @@
             this.btnRetour.TabIndex = 6;
             this.btnRetour.Text = "Retour";
             this.btnRetour.UseVisualStyleBackColor = true;
+            this.btnRetour.Click += new System.EventHandler(this.BtnRetour_Click);
+            // 
+            // btnClients
+            // 
+            this.btnClients.Location = new System.Drawing.Point(333, 551);
+            this.btnClients.Name = "btnClients";
+            this.btnClients.Size = new System.Drawing.Size(75, 23);
+            this.btnClients.TabIndex = 7;
+            this.btnClients.Text = "Clients";
+            this.btnClients.UseVisualStyleBackColor = true;
+            this.btnClients.Click += new System.EventHandler(this.BtnClients_Click);
             // 
             // Administration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 589);
+            this.ClientSize = new System.Drawing.Size(758, 589);
+            this.Controls.Add(this.btnClients);
             this.Controls.Add(this.btnRetour);
-            this.Controls.Add(this.btnAjout);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.lblGM);
+            this.Controls.Add(this.btnMateriel);
             this.Controls.Add(this.lblFactures);
             this.Controls.Add(this.dGVFactures);
             this.Controls.Add(this.lblAdmin);
             this.Name = "Administration";
             this.Text = "Administration";
+            this.Load += new System.EventHandler(this.Administration_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dGVFactures)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -129,9 +157,13 @@
         private System.Windows.Forms.Label lblAdmin;
         private System.Windows.Forms.DataGridView dGVFactures;
         private System.Windows.Forms.Label lblFactures;
-        private System.Windows.Forms.Label lblGM;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button btnAjout;
+        private System.Windows.Forms.Button btnMateriel;
         private System.Windows.Forms.Button btnRetour;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idCo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn prixTotal;
+        private System.Windows.Forms.DataGridViewTextBoxColumn effectifMaterielTotal;
+        private System.Windows.Forms.DataGridViewTextBoxColumn typeCommande;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idCl;
+        private System.Windows.Forms.Button btnClients;
     }
 }

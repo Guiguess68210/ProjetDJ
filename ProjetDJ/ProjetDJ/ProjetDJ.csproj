@@ -72,6 +72,12 @@
     <Compile Include="Administration.Designer.cs">
       <DependentUpon>Administration.cs</DependentUpon>
     </Compile>
+    <Compile Include="AjoutMateriel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AjoutMateriel.Designer.cs">
+      <DependentUpon>AjoutMateriel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Classes\Achat.cs" />
     <Compile Include="Classes\AchatADO.cs" />
     <Compile Include="Classes\Administrateur.cs" />
@@ -80,6 +86,7 @@
     <Compile Include="Classes\ClientsADO.cs" />
     <Compile Include="Classes\Commande.cs" />
     <Compile Include="Classes\CommandeADO.cs" />
+    <Compile Include="Classes\Connexion.cs" />
     <Compile Include="Classes\Contenir.cs" />
     <Compile Include="Classes\ContenirADO.cs" />
     <Compile Include="Classes\Location.cs" />
@@ -151,6 +158,9 @@
     <EmbeddedResource Include="Administration.resx">
       <DependentUpon>Administration.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AjoutMateriel.resx">
+      <DependentUpon>AjoutMateriel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Dates.resx">
       <DependentUpon>Dates.cs</DependentUpon>
     </EmbeddedResource>
@@ -207,5 +217,31 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup />
+  <ItemGroup>
+    <Content Include="Images\barreContest.jpg" />
+    <Content Include="Images\barreShowtec.jpg" />
+    <Content Include="Images\double-lyre-beam.jpg" />
+    <Content Include="Images\enceinte-amplifiee-mackie-thump15a.jpg" />
+    <Content Include="Images\ibiza-port15vhf-bt-systeme-de-sonorisation-portabl.jpg" />
+    <Content Include="Images\laser-dune-las.jpg" />
+    <Content Include="Images\laserRGB.jpg" />
+    <Content Include="Images\lyre-chauvet-intimidator-spot.jpg" />
+    <Content Include="Images\lyre-spot-a-led-showtec-is200.jpg" />
+    <Content Include="Images\machine-a-fumee-boomtonedj.jpg" />
+    <Content Include="Images\machine-a-mousse-antari.jpg" />
+    <Content Include="Images\paire-d-enceintes-sono-passives-boomtone-dj-bm215.jpg" />
+    <Content Include="Images\projecteur-a-led-boomtone-dj-silentpar-12x10-5in1.jpg" />
+    <Content Include="Images\projecteur-a-led-cameo.jpg" />
+    <Content Include="Images\projecteur-a-leds-american.jpg" />
+    <Content Include="Images\projecteur-a-leds-contest.jpg" />
+    <Content Include="Images\projecteur-a-leds-ibiza-par36led.jpg" />
+    <Content Include="Images\projecteur-american-dj-par.jpg" />
+    <Content Include="Images\projecteur-par-20.jpg" />
+    <Content Include="Images\projecteur-par-56-long-noir.jpg" />
+    <Content Include="Images\projecteur-par-64.jpg" />
+    <Content Include="Images\projecteur-par-a-leds.jpg" />
+    <Content Include="Images\projecteurde-4-leds-60w-4en1-rgbw-avec-zoom.jpg" />
+    <Content Include="Images\spot-compact-avec-led-blanc-chaud-cameo.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

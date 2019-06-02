@@ -15,32 +15,47 @@ namespace ProjetDJ
         Listes lst;
         LocAchat lA;
         DétailsCommande dC;
-        public Dates()
+        public string locAchat="";
+        private string idCl = "";
+        public Dates(string locAchat, string idClient)
         {
             InitializeComponent();
+            this.locAchat = locAchat;
+            this.idCl = idClient;
         }
 
         private void Dates_Load(object sender, EventArgs e)
         {
-            lst = new Listes();
-            lA = new LocAchat();
-            dC = new DétailsCommande();
+           
+            if (this.locAchat == "Location")
+            {
+                gBAchat.Visible = false;
+
+            }
+
+            else
+            {
+                gBLocation.Visible = false;
+            }
         }
 
         private void btnRetour_Click(object sender, EventArgs e)
         {
+            lst = new Listes(this.locAchat, this.idCl);
             lst.Show();
             this.Hide();
         }
 
         private void btnAnnuler_Click(object sender, EventArgs e)
         {
+            lA = new LocAchat(this.idCl);
             lA.Show();
             this.Hide();
         }
 
         private void btnOk_Click(object sender, EventArgs e)
         {
+            dC = new DétailsCommande(this.locAchat, this.idCl);
             dC.Show();
             this.Hide();
         }
